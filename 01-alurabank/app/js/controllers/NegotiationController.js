@@ -1,10 +1,11 @@
 class NegotiationController {
     constructor() {
         this.negotiations = new Negotiations();
-        this.negotiationsView = new NegotiationsView();
+        this.negotiationsView = new NegotiationsView('#negociacoesView');
         this.inputDate = document.querySelector("#data");
         this.inputQuantity = document.querySelector("#quantidade");
         this.inputValue = document.querySelector("#valor");
+        this.negotiationsView.update();
     }
     add(event) {
         event.preventDefault();

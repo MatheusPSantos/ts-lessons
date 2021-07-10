@@ -1,4 +1,15 @@
 class NegotiationsView {
+
+  private element: Element;
+
+  constructor(sel: string) {
+    this.element = document.querySelector(sel);
+  }
+
+  update(): void {
+    this.element.innerHTML = this.template();
+  }
+
   template(): string {
     return `
       <table class="table table-hover table-bordered">
@@ -6,7 +17,8 @@ class NegotiationsView {
           <tr>
             <th>DATA</th>
             <th>QUANTIDADE</th>
-            <tf>VOLUME</th>
+            <th>VALOR</th>
+            <th>VOLUME</th>
           </tr>
         </thead>
         <tbody>

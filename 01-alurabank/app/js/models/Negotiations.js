@@ -7,6 +7,6 @@ class Negotiations {
         this.negotiations.push(negotiation);
     }
     toArray() {
-        return this.negotiations;
+        return [].concat(this.negotiations);
     }
 }

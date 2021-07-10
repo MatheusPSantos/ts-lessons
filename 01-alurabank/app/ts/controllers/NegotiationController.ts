@@ -3,6 +3,7 @@ class NegotiationController {
   private inputDate: HTMLInputElement;
   private inputQuantity: HTMLInputElement;
   private inputValue: HTMLInputElement;
+  private negotiations: Negotiations = new Negotiations();
 
   constructor() {
     this.inputDate = <HTMLInputElement>document.querySelector("#data");
@@ -20,6 +21,13 @@ class NegotiationController {
       parseFloat(this.inputValue.value)
     );
 
+    this.negotiations.add(negotiation);
+
+    this.negotiations.toArray().forEach(n => {
+      console.log(n.date);
+      console.log(n.quantity);
+      console.log(n.value);
+    });
     console.log(negotiation.quantity + 20);
   }
 }

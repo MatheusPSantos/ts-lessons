@@ -8,6 +8,6 @@ class Negotiations {
   }
 
   toArray() {
-    return this.negotiations;
+    return [].concat(this.negotiations);
   }
 }

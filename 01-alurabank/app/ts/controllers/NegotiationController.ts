@@ -4,6 +4,7 @@ class NegotiationController {
   private inputQuantity: HTMLInputElement;
   private inputValue: HTMLInputElement;
   private negotiations: Negotiations = new Negotiations();
+  private negotiationsView = new NegotiationsView('#negociacoesView');
 
   constructor() {
     this.inputDate = <HTMLInputElement>document.querySelector("#data");

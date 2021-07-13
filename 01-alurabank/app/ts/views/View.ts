@@ -9,7 +9,5 @@ abstract class View<T> {
     this.element.innerHTML = this.template(model);
   }
 
-  template(model: T): string {
-    throw new Error('The method "template" need be implemented');
-  }
+  abstract template(model: T): string;
 }

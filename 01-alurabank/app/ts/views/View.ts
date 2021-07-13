@@ -1,6 +1,5 @@
-declare var $: any;
 abstract class View<T> {
-  private element: any;
+  private element: JQuery;
 
   constructor(sel: string) {
     this.element = $(sel);
